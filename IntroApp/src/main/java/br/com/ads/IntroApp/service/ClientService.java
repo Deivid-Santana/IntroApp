@@ -37,4 +37,13 @@ public class ClientService {
             return null;
         }
     }
+
+    public void delete(long id){
+        var found = repository.findById(id);
+        if(found.isPresent()){
+            repository.delete(found.get());
+        }
+    }
+
+
 }
