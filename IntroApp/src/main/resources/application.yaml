@@ -5,6 +5,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/intro_spring?serverTimeZone=ADT
     username: postgres
     password: 123456
+
+    # o valor 'update' verifica se o esquema já está criado no BD e compara com a model,
+    # se estiver igual ele nao faz nada, porém se não estiver, ele altera de acordo com o necesário
   jpa:
     hibernate:
       ddl-auto: update
