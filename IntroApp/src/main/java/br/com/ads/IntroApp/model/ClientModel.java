@@ -22,3 +22,5 @@ public class ClientModel {
     @Column(nullable = false, length = 50)
     private String city;
 }
+
+// novos atributos na v2
