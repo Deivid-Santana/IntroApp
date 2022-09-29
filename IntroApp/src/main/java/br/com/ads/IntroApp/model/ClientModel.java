@@ -1,6 +1,8 @@
 package br.com.ads.IntroApp.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -21,6 +23,14 @@ public class ClientModel {
 
     @Column(nullable = false, length = 50)
     private String city;
-}
 
-// novos atributos na v2
+
+    // novos atributos na v2
+    @Column(nullable = true, length = 100)
+    //o comando a seguir é como se usassemos o @Data, porém, dessa forma, o código não acusa erros, como na linha 11
+    @Getter @Setter
+    private String email;
+
+
+
+}
