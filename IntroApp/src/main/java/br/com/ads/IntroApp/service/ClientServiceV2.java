@@ -47,5 +47,7 @@ public class ClientServiceV2 {
         }
     }
 
-
+    public List<ClientModel> findByEmail(String email) {
+        return repository.findByEmailStartsWithIgnoreCase(email);
+    }
 }
